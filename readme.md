@@ -39,8 +39,10 @@ my-webdev-journey/
 ├── blog1.html       # First blog post
 ├── blog2.html       # Future blog posts
 └── README.md        
-📬 Connect With Me
-LinkedIn: Sameera Afridi
 
-GitHub: sameeraafridi
+📬 Connect With Me
+
+LinkedIn: https://www.linkedin.com/in/sameera-afridi-823833378?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
+
+GitHub: [sameeraafridi](https://github.com/SameeraAfridi)
 
