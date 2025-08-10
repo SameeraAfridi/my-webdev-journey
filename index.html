@@ -65,8 +65,46 @@
         </section>
     </main>
 
-    <footer>
+      <footer>
         <p>© 2025 Sameera Afridi | Built with ❤️ </p>
+        <p id="visitor-count">Visitors: 0</p>
     </footer>
+
+    <!-- Firebase Visitor Counter -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+        import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC_p-gJ4Os3v32Ls7pYCHV4QP_LPXD4BjM",
+            authDomain: "my-blog-d4359.firebaseapp.com",
+            projectId: "my-blog-d4359",
+            storageBucket: "my-blog-d4359.firebasestorage.app",
+            messagingSenderId: "282408408982",
+            appId: "1:282408408982:web:9c4d114b237643b6356fb7"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        async function updateVisitors() {
+            const ref = doc(db, "siteData", "visitors");
+            const snap = await getDoc(ref);
+
+            if (!snap.exists()) {
+                await setDoc(ref, { count: 1 });
+                document.getElementById("visitor-count").textContent = "Visitors: 1";
+            } else {
+                await updateDoc(ref, { count: increment(1) });
+                const newSnap = await getDoc(ref);
+                document.getElementById("visitor-count").textContent = "Visitors: " + newSnap.data().count;
+            }
+        }
+
+        updateVisitors();
+    </script>
 </body>
+
+</body>
+
 </html>

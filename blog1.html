@@ -17,8 +17,6 @@
   <meta property="og:url" content="https://sameeraafridi.github.io/blog1.html">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
 <main class="content">
   <article class="blog-card blog-html-css">
     <h2>🚀 My Web Development Journey: From University Struggles to GitHub Wins</h2>
@@ -102,6 +100,55 @@
     </section>
   </article>
 </main>
+...
+      <footer>
+        <p id="view-count">Views: 0</p>
+        <button id="like-btn">❤️ Like (<span id="like-count">0</span>)</button>
+    </footer>
+
+    <!-- Firebase Blog Post Stats -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+        import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC_p-gJ4Os3v32Ls7pYCHV4QP_LPXD4BjM",
+            authDomain: "my-blog-d4359.firebaseapp.com",
+            projectId: "my-blog-d4359",
+            storageBucket: "my-blog-d4359.firebasestorage.app",
+            messagingSenderId: "282408408982",
+            appId: "1:282408408982:web:9c4d114b237643b6356fb7"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const postId = "blog1"; // Change if you add more blogs
+
+        async function updateViews() {
+            const ref = doc(db, "blogPosts", postId);
+            const snap = await getDoc(ref);
+
+            if (!snap.exists()) {
+                await setDoc(ref, { views: 1, likes: 0 });
+                document.getElementById("view-count").textContent = "Views: 1";
+            } else {
+                await updateDoc(ref, { views: increment(1) });
+                const newSnap = await getDoc(ref);
+                document.getElementById("view-count").textContent = "Views: " + newSnap.data().views;
+                document.getElementById("like-count").textContent = newSnap.data().likes;
+            }
+        }
+
+        async function likePost() {
+            const ref = doc(db, "blogPosts", postId);
+            await updateDoc(ref, { likes: increment(1) });
+            const snap = await getDoc(ref);
+            document.getElementById("like-count").textContent = snap.data().likes;
+        }
+
+        document.getElementById("like-btn").addEventListener("click", likePost);
+        updateViews();
+    </script>
 
 </body>
 </html>
