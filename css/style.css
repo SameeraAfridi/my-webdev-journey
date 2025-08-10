@@ -34,6 +34,34 @@ header p {
 }
 
 /* Sections */
+.like-box {
+  border: 2px solid #ff4081; /* pinkish border */
+  background-color: #fff0f6; /* light pink background */
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+#like-btn {
+  font-size: 1.3rem;
+  padding: 10px 18px;
+  cursor: pointer;
+  border: none;
+  background-color: #ff4081;
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+#like-btn:hover {
+  background-color: #e0356d;
+}
+
 .intro, .blog-section, .tips {
     max-width: 900px;
     margin: 25px auto;
