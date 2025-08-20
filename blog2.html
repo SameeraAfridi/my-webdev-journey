@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM Adventures | My Web Development Journey</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Extra styling just for blog layout */
+    .image-row {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 15px 0;
+      flex-wrap: wrap;
+    }
+    .image-row img {
+      width: 300px;   /* fixed width */
+      height: 300px;  /* fixed height */
+      object-fit: cover; /* crop nicely */
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Links Section */
+    .repo-link {
+      margin-top: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+    .repo-link a {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+      font-weight: bold;
+      color: #1cf32b;
+    }
+    .repo-link a.github {
+      background: #095978;
+    }
+    .repo-link a.github:hover {
+      background: #000;
+    }
+    .repo-link a.live {
+      background: #06a093;
+    }
+    .repo-link a.live:hover {
+      background: #048073;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript DOM Adventures 🚀</h1>
+    <p>Exploring how I made my projects interactive with JavaScript</p>
+  </header>
+
+  <main class="container">
+    <!-- Portfolio Section -->
+    <section>
+      <h2>📌 Portfolio Website</h2>
+      <p>
+        My portfolio started as a simple HTML & CSS project. It displayed static information about me and my projects.  
+        Later, I upgraded it using JavaScript DOM i added new features to make it more interactive and engaging:
+      </p>
+      <ul>
+        <li>Added interactive navigation</li>
+        <li>Added button for Dark and light mood</li>
+        <li>Improvement in project display portion </li>
+      </ul>
+      <div class="image-row">
+        <img src="images/pp1.jpg" alt="Portfolio Screenshot 1">
+        <img src="images/pp2.jpg" alt="Portfolio Screenshot 2">
+      </div>
+      <div class="repo-link">
+        <a href="https://github.com/SameeraAfridi/portfolio" target="_blank" class="github">View on GitHub</a>
+        <a href="https://sameeraafridi.github.io/portfolio/" target="_blank" class="live">Live Demo</a>
+      </div>
+    </section>
+
+    <!-- University Landing Page Section -->
+    <section>
+      <h2>🎓 University Landing Page</h2>
+      <p>
+        My university landing page was first created with <b>HTML & CSS</b> for layout and styling.  
+        Then I enhanced it with <b>JavaScript</b>:
+      </p>
+      <ul>
+        <li>Added dropdown menus in navigation (About, Admissions, Programs)</li>
+        <li>Made Graduate/Undergraduate programs expandable</li>
+        <li>Created redirection features with links</li>
+        <li>Interactive message box where users can enter their name</li>
+      </ul>
+      <div class="image-row">
+        <img src="images/1.jpg" alt="University Landing Page Screenshot 1">
+        <img src="images/2.jpg" alt="University Landing Page Screenshot 2">
+      </div>
+      <div class="image-row">
+        <img src="images/3.jpg" alt="University Landing Page Screenshot 3">
+        <img src="images/4.jpg" alt="University Landing Page Screenshot 4">
+      </div>
+      <div class="repo-link">
+        <a href="https://github.com/SameeraAfridi/university-landing-page-java-script" target="_blank" class="github">View on GitHub</a>
+        <a href="https://sameeraafridi.github.io/university-landing-page-java-script/" target="_blank" class="live">Live Demo</a>
+      </div>
+    </section>
+
+    <!-- To-Do App Section -->
+    <section>
+      <h2>✅ To-Do App</h2>
+      <p>
+        My To-Do App was built directly with <b>JavaScript</b> to practice DOM manipulation.  
+        Some improvements I made:
+      </p>
+      <ul>
+        <li>Added the types of list clicking feature enabled through JavaScript</li>
+        <li>Users can add, edit, and delete tasks dynamically</li>
+        <li>Improved UI with CSS styling</li>
+        <li>Form validation and interactive task list</li>
+      </ul>
+      <div class="image-row">
+        <img src="images/Todo.jpg" alt="To-Do App Screenshot">
+      </div>
+      <div class="repo-link">
+        <a href="https://github.com/SameeraAfridi/todo-app-js" target="_blank" class="github">View on GitHub</a>
+        <a href="https://sameeraafridi.github.io/todo-app-js/" target="_blank" class="live">Live Demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sameera Afridi | My Web Development Journey</p>
+  </footer>
+</body>
+</html>
