@@ -1,4 +1,6 @@
  My Web Development Journey
+
+ 
 Welcome to My Web Development Journey — a personal blog where I share my step-by-step progress in learning HTML, CSS, JavaScript, React, and backend development.
 This repository powers my live blog hosted via GitHub Pages, where I document my skills, projects, and growth as a developer.
 
