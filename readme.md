@@ -1,10 +1,10 @@
-🚀 My Web Development Journey
+ My Web Development Journey
 Welcome to My Web Development Journey — a personal blog where I share my step-by-step progress in learning HTML, CSS, JavaScript, React, and backend development.
 This repository powers my live blog hosted via GitHub Pages, where I document my skills, projects, and growth as a developer.
 
-🌐 Live Site: [My Web Development Journey](https://sameeraafridi.github.io/my-webdev-journey/)
+ Live Site: [My Web Development Journey](https://sameeraafridi.github.io/my-webdev-journey/)
 
-📖 About This Project
+ About This Project
 I started this blog to:
 
 Track my learning progress publicly.
@@ -15,7 +15,7 @@ Build a portfolio of HTML/CSS/JS projects.
 
 Inspire other beginners who are starting their web dev journey.
 
-🗺️ My Learning Roadmap
+ My Learning Roadmap
 HTML & CSS – Structure & styling of the web.
 
 JavaScript – Adding interactivity.
@@ -30,7 +30,7 @@ Deployment & Hosting – Making projects live.
 
 Continuous Learning – Never stop exploring.
 
-📂 Repository Structure
+ Repository Structure
 
 my-webdev-journey/
 │
